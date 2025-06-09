@@ -1,0 +1,47 @@
+# Python
+__pycache__/
+*.py[cod]
+*.so
+
+# Virtual Environments
+env/
+ENV/
+.venv/
+venv/
+.env/
+
+# Environment variables
+.env
+
+# Logs
+*.log
+
+# Type checking & testing
+.mypy_cache/
+.pytest_cache/
+.coverage
+htmlcov/
+.dmypy.json
+.cache/
+*.cover
+
+# IDE/Editor settings
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# macOS system files
+.DS_Store
+
+# Build/Packaging
+dist/
+build/
+*.spec
+
+# SSL/証明書ファイル（セキュリティ除外）
+*.pem
+*.crt.pem
+
+# OS artifacts
+Thumbs.db
