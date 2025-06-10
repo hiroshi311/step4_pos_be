@@ -11,7 +11,10 @@ class Settings(BaseSettings):
     # SQLAlchemy用のデータベースURL
     @property
     def DATABASE_URL(self) -> str:
-        return f"mysql+pymysql://{self.MYSQL_USER}:{self.MYSQL_PASSWORD}@{self.MYSQL_HOST}:{self.MYSQL_PORT}/{self.MYSQL_DATABASE}"
-
+        return (
+            f"mysql+pymysql://{self.MYSQL_USER}:{self.MYSQL_PASSWORD}"
+            f"@{self.MYSQL_HOST}:{self.MYSQL_PORT}/{self.MYSQL_DATABASE}"
+            f"?ssl_ca=app/core/DigiCertGlobalRootCA.crt.pem"
+        )
 # グローバル設定インスタンス
 settings = Settings() 
