@@ -79,7 +79,7 @@ def create_purchase(transaction: TransactionCreate, db: Session = Depends(get_db
 @router.get("/transactions", response_model=List[TransactionResponse])
 def get_transactions(db: Session = Depends(get_db)):
     """取引履歴を取得するエンドポイント"""
-    transactions = db.query(Transaction).order_by(Transaction.DATETIME.desc()).all()
+    transactions = db.query(Transaction).order_by(Transaction.datetime.desc()).all()
     return transactions
 
 @router.get("/transactions/{transaction_id}", response_model=TransactionResponse)
