@@ -41,7 +41,9 @@ build/
 
 # SSL/証明書ファイル（セキュリティ除外）
 *.pem
-*.crt.pem
+#*.crt.pem
 
 # OS artifacts
 Thumbs.db
+
+!app/core/DigiCertGlobalRootCA.crt.pem
