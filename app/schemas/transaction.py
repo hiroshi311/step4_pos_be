@@ -46,14 +46,14 @@ class TransactionCreate(BaseModel):
 
 class TransactionResponse(BaseModel):
     TRD_ID: int
-    DATETIME: datetime
-    EMP_CD: str
-    STORE_CD: str
-    POS_NO: str
-    TOTAL_AMT: float
-    TTL_AMT_EX_TAX: float
+    datetime: datetime
+    employee_code: str
+    store_code: str
+    pos_no: str
+    total_amount: float
+    total_amount_ex_tax: float
     payment_method: str
     details: List[TransactionDetailResponse]
 
     class Config:
-        from_attributes = True 
+        from_attributes = True
