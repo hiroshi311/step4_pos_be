@@ -57,7 +57,7 @@ def create_purchase(transaction: TransactionCreate, db: Session = Depends(get_db
     # 明細の追加
     for detail in transaction_details:
         db_detail = TransactionDetail(
-            transaction_id=db_transaction.TRD_ID,
+            TRD_ID=db_transaction.TRD_ID,
             **detail
         )
         db.add(db_detail)
