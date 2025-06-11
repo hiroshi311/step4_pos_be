@@ -32,7 +32,6 @@ def create_purchase(transaction: TransactionCreate, db: Session = Depends(get_db
         total_amount += subtotal
 
         transaction_details.append({
-            "TRD_ID": db_transaction.TRD_ID,  # ここも大文字に変更
             "PRD_ID": product.id,
             "PRD_CODE": product.barcode,
             "PRD_NAME": product.name,
